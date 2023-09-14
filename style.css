@@ -1,0 +1,68 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: rgb(220, 200, 200);
+    overflow-x: hidden;
+}
+
+.section_slider {
+    max-width: 102rem;
+    width: 100%;
+    margin: 5vh auto;
+}
+
+.slider_wrapper {
+    display: flex;
+    gap: 5vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider_top{
+    height: 60vh;
+    background-color:aquamarine;
+}
+
+.pictures_wrapper {
+    width: 65vh;
+    margin: 1vh auto;
+    overflow: hidden;
+}
+
+.pictures {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1vh;
+    /* transform: translateX(-66vh); */
+    transition: transform 0.8s;
+}
+
+.meme_img {
+    width: 100%;
+}
+
+.picture {
+    width: 65vh;
+    flex-shrink: 0;
+    /* height: 57.4vh; */
+}
+
+.slider_bottom {
+    display: flex;
+    width: 80%;
+    height: 20vh;
+    background-color:cadetblue;
+}
+
+.slider_text {
+    flex-grow: 1;
+    background-color:chocolate;
+}
+
+.slider_controls {
+    width: 30rem; //убрать потом!!!!??
+    flex-shrink: 1;
+    background-color: brown;
+}
