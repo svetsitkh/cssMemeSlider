@@ -1,41 +1,45 @@
 html {
-    font-size: 10px;
+    font-size: calc((1vw + 1vh) * 0.7);
+    scroll-behavior: smooth;
 }
 
 body {
+    box-sizing: border-box;
     background-color: rgb(220, 200, 200);
+    /* background-color: rgb(190, 181, 200); */
     overflow-x: hidden;
 }
 
 .section_slider {
-    max-width: 102rem;
+    /* max-width: 73rem; */
+    max-width: 95vw;
     width: 100%;
-    margin: 5vh auto;
+    margin: 2vw auto;
+    /* background-color: blueviolet; */
 }
 
 .slider_wrapper {
     display: flex;
-    gap: 5vh;
+    gap: 1vw;
     flex-direction: column;
     align-items: center;
 }
 
 .slider_top{
-    height: 60vh;
-    background-color:aquamarine;
+    /* background-color:aquamarine; */
 }
 
 .pictures_wrapper {
-    width: 65vh;
-    margin: 1vh auto;
+    width: 65vw;
+    margin: auto;
+    border-radius: 2%;
     overflow: hidden;
 }
 
 .pictures {
     display: flex;
     justify-content: space-between;
-    column-gap: 1vh;
-    /* transform: translateX(-66vh); */
+    column-gap: 1vw;
     transition: transform 0.8s;
 }
 
@@ -44,25 +48,83 @@ body {
 }
 
 .picture {
-    width: 65vh;
+    width: 65vw;
+    /* width: 70vh; */
     flex-shrink: 0;
-    /* height: 57.4vh; */
 }
 
 .slider_bottom {
     display: flex;
-    width: 80%;
-    height: 20vh;
-    background-color:cadetblue;
+    width: 65vw;
+    /* width: 70vh; */
+    height: 12vw;
 }
 
 .slider_text {
     flex-grow: 1;
-    background-color:chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color:chocolate; */
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.text_wrapper {
+    width: 80%;
+    height: 80%;
+}
+
+.text {
+    font-size: 2rem;
+    color: #ffffff;
 }
 
 .slider_controls {
-    width: 30rem; //убрать потом!!!!??
+    display: flex;
     flex-shrink: 1;
-    background-color: brown;
+    /* background-color: brown; */
+}
+
+input {
+	display: none;
+}
+
+.slider_controls label {
+	cursor: pointer;
+	display: inline-block;
+	height: 2rem;
+    width: 2rem;
+	margin: 2rem 1rem 0 1.4rem;
+    border-radius: 50%;
+    border: 0.3rem solid #817681;
+    /* background: #FFFFFF; */
+}
+
+.slider_controls label:hover {
+    border-width: 0.4rem;
+    background: #f9f9d5;
+}
+
+#meme1:checked ~ .slider_controls label:nth-of-type(1),
+#meme2:checked ~ .slider_controls label:nth-of-type(2),
+#meme3:checked ~ .slider_controls label:nth-of-type(3),
+#meme4:checked ~ .slider_controls label:nth-of-type(4) {
+	background: #f7f99a;
+}
+
+#meme1:checked ~ .pictures {
+    transform: translateX(0);
+}
+
+#meme2:checked ~ .pictures {
+    transform: translateX(-66vw);
+}
+
+#meme3:checked ~ .pictures {
+    transform: translateX(-132vw);
+}
+
+#meme4:checked ~ .pictures {
+    transform: translateX(-198vw);
 }
